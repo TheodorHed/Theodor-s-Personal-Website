@@ -1,0 +1,86 @@
+header {
+    background-color: aquamarine; 
+  }
+  
+  body {
+   background-image: url("background_nature.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  
+  }
+  
+  .box {  
+    outline: 3px solid red;  
+    border: 3px solid lightgreen;  
+    border-radius: 15px;  
+    padding: 5px 10px;  
+  } 
+  
+  .black_box {  
+    outline: 3px solid black;
+    border: 3px solid black;  
+    border-radius: 15px;
+    padding: 5px 10px;  
+  }   
+  
+  footer {
+    background-color: aquamarine; 
+  }
+  
+  *{
+    font-family: "Helvetica";
+  }
+  
+    body {
+    text-shadow: 2px 2px #ffffff;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    outline: 3px solid white;
+    border: 3px solid black;  
+    padding: 5px 10px; 
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .three {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
