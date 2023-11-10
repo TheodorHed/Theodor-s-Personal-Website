@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' type='text/css' href='style.css'>
+  <style>
+    .flex-container {
+    display: flex;
+    background-color: white;
+    }
+
+    .flex-container > div {
+    background-color: silver;
+    margin: 10px;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    }
+  </style>
+</head>
+
+<header class="black_box">
+	<div class="header">
+		<h1><center>Theodor Hedesiu</center></h1>
+		<p><center>About Me</center></p>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about_me.html">About Me</a></li>
+      <li><a href="career.html">My Career Journey</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="projects.html">Projects</a></li>
+  </ul>
+	</div>
+</header>
+
+<body class="box">
+<h2>About Me</h2>
+<div class="flex-container">
+  <div>
+    <p><h3><b>CodeWars Dog Years Cat Years Challenge</b></h3>
+From the Codewars platform I decided to do the Cat Years, Dog Years challenge.
+
+I was given the task of making a converter that could take an input of dog years and cat years and convert them into human years.
+The function takes 2 values (a value in cat years and one in dog years) and returns them converted into human years in a list.
+
+Example :
+------------------------------------------------------------
+Input: owned_cat_and_dog(56,64)
+Output: [10, 10]
+Explanation: Since 56 cat years would be 10 years in real life, and 64 dog years would also be 10,
+             the output should be a list made up of 10 and 10
+This is the code that I have made for the challenge :
+-------------------------------------------------------------
+def owned_cat_and_dog(cat_years, dog_years):
+    cat = cat_years
+    dog = dog_years
+
+    if cat < 24:
+      cat_years = 1
+    if dog < 24:
+      dog_years = 1
+    if cat == 24:
+      cat_years = 2
+    if dog == 24:
+      dog_years = 2
+    if cat > 24:
+      cat_years = int((cat - 24) / 4) + 2
+    if dog > 24:
+      dog_years = int((dog - 24) / 5) + 2
+    if cat < 15:
+        cat_years = 0
+    if dog < 15:
+        dog_years = 0
+    return [cat_years, dog_years]
+-------------------------------------------------------------
+So when testing the code with the above example, I get the desired output of [10, 10]
+-------------------------------------------------------------
+The function works by checking each value and adding : 1 to the real age for the first 15 years of the pet's age
+                                                       another 1 to the real age for the next 9 years of the pet's age
+                                                       another 4 years for cats and 5 years for dogs for every year after that
+      </p>
+
+      
+      <p><h3><b>HackerRank Finding The Percetnage Challenge</b></h3>
+        From the HackerRank platform I decided to do the Finding the Percentage challenge.
+
+I was given an dictionary with key value pairs containing the name of each student and their grades.
+The code is suppossed to output the average grade for the specified student. (averaged with 2 decimals at the end)
+So when given the number 3, the fucntion should output the average grades for student #3.
+
+Example :
+------------------------------------------------------------
+Input: 
+3
+student_list = {'Krishna': [67, 68, 69],
+                'Arjun': [70, 98, 63],
+                'Malika': [52, 56, 60]}
+Output: 56.00
+Explanation: Because I entered 3, the fucntion looks for the 3rd student, Malika in this case, and gives me the average of her grades
+
+This is the code that I have made for the challenge :
+-------------------------------------------------------------
+if __name__ == '__main__':
+    student_number=int(input())
+    student = dict()
+    
+    for _ in range(student_number):
+        name , *mark = input().split()
+        student[name] =list(map(float,mark))
+        
+    query_name = input()
+    for key , value  in student.items():
+        if key == query_name:
+            print(f'{sum((value))/3:.2f}')
+-------------------------------------------------------------
+So when testing the code with the above example, I get the desired output of 56.00
+-------------------------------------------------------------
+The function works by checking each student in the list and extracting the key value pair for the specific student number that was passed as the first argument.
+It then extracts the students grades using the duct function and returns an average of the students grades rounded by 2 decimals.
+      </p>
+      <p><h3><b>LeetCode TwoSum Challenge</b></h3>
+      From the LeetCode platform I decided to do the Two Sum challenge.
+
+Given an array of integers nums and an integer target, I had to return the indices of the two numbers such that they add up to target.
+I can assume that each input would have exactly one solution, and I could not use the same element twice.
+I can return the answer in any order.
+
+Example :
+-------------------------------------------------------------
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+This is the code that I have made for the challenge :
+-------------------------------------------------------------
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    counter = 0
+    for i in nums:
+        if nums[counter] + nums[counter + 1] == target:
+            return [counter, counter + 1] 
+        else:
+            counter = counter + 1
+-------------------------------------------------------------
+So when testing the code with the above example, I get the desired output of [0, 1]:
+-------------------------------------------------------------
+nums = [2,7,11,15]
+print(twoSum(nums, 9)
+-------------------------------------------------------------
+The function works by checking each element of the list to the next element and it will keep checking until it finds a pair of values that adds up to teh desired target.
+The counter parameter keeps track of what element at which index is being checked.
+If 2 values add up, the index of the 2 values are returned in a list.
+      </p>
+  </div>
+</div>
+</body>
+
+<footer class="black_box">
+
+</footer>
+
+</html>
